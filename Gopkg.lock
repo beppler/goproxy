@@ -5,7 +5,7 @@
   branch = "master"
   name = "github.com/elazarl/goproxy"
   packages = ["."]
-  revision = "aacba83f36a55ac31cbb71c06547a328c0cd1604"
+  revision = "a96fa3a318260eab29abaf32f7128c9eb07fb073"
 
 [solve-meta]
   analyzer-name = "dep"
