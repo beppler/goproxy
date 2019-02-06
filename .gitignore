@@ -3,6 +3,8 @@
 
 ### Go ###
 # Binaries for programs and plugins
+goproxy
+debug
 *.exe
 *.dll
 *.so
@@ -22,5 +24,3 @@
 # external packages folder
 vendor/
 
-# vscode debug executable
-debug
