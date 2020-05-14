@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/tls"
 	"flag"
 	"log"
 	"net/http"
@@ -15,6 +16,10 @@ func main() {
 	flag.Parse()
 	proxy := goproxy.NewProxyHttpServer()
 	if *mitm {
+		caCert, err := tls.LoadX509KeyPair("ca.cer", "ca.key")
+		if err == nil {
+			goproxy.MitmConnect = &goproxy.ConnectAction{Action: goproxy.ConnectMitm, TLSConfig: goproxy.TLSConfigFromCA(&caCert)}
+		}
 		proxy.OnRequest().HandleConnect(goproxy.AlwaysMitm)
 	}
 	proxy.Verbose = *verbose
