@@ -24,3 +24,6 @@ debug
 # external packages folder
 vendor/
 
+# test certificates
+ca.cer
+ca.key
