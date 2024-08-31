@@ -1,5 +1,10 @@
-module git.mps.com.br/carlos.beppler/goproxy
+module github.com/beppler/goproxy
 
-require github.com/elazarl/goproxy v0.0.0-20200426045556-49ad98f6dac1
+go 1.22
 
-go 1.13
+require github.com/elazarl/goproxy v0.0.0-20240726154733-8b0c20506380
+
+require (
+	golang.org/x/net v0.26.0 // indirect
+	golang.org/x/text v0.16.0 // indirect
+)
